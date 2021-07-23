@@ -1,20 +1,20 @@
 /*MENU SHOW AND HIDDEN*/
 const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
 
 /*MENU SHOW*/
 // Validate if constant exists
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
         navMenu.classList.add('show-menu')
     })
 }
 
 /*MENU HIDDEN*/
 // Validate if constant exists
-if(navClose){
-    navClose.addEventListener('click', () =>{
+if (navClose) {
+    navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
     })
 }
@@ -22,7 +22,7 @@ if(navClose){
 /*REMOVE MENU MOBILE*/
 const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
+function linkAction() {
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
@@ -31,20 +31,20 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*ACCORDION SKILLS*/
 const skillsContent = document.getElementsByClassName('skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header');
+    skillsHeader = document.querySelectorAll('.skills__header');
 
-function toggleSkills(){
+function toggleSkills() {
     let itemClass = this.parentNode.className
 
-    for(i=0; i<skillsContent.length; i++){
+    for (i = 0; i < skillsContent.length; i++) {
         skillsContent[i].className = 'skills__content skills__close'
     }
-    if(itemClass === 'skills__content skills__close'){
+    if (itemClass === 'skills__content skills__close') {
         this.parentNode.className = 'skills__content skills__open'
     }
 }
 
-skillsHeader.forEach((el)=>{
+skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 })
 
@@ -70,23 +70,38 @@ tabs.forEach(tab =>{
 
 /*SERVICES MODAL*/
 const modalViews = document.querySelectorAll('.personal__modal'),
-      modalBtns = document.querySelectorAll('.personal__button'),
-      modalCloses = document.querySelectorAll('.personal__modal-close')
+    modalBtns = document.querySelectorAll('.personal__button'),
+    modalCloses = document.querySelectorAll('.personal__modal-close')
 
-let modal = function(modalClick){
+let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal')
 }
 
-modalBtns.forEach((modalBtn, i) =>{
-    modalBtn.addEventListener('click', () =>{
+modalBtns.forEach((modalBtn, i) => {
+    modalBtn.addEventListener('click', () => {
         modal(i)
     })
 })
 
 modalCloses.forEach((modalClose) => {
-    modalClose.addEventListener('click', () =>{
-        modalViews.forEach((modalView) =>{
+    modalClose.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
             modalView.classList.remove('active-modal')
         })
     })
 })
+
+/*ACHIEVEMENT SWIPER*/
+let swiper = new Swiper('.portfolio__container', {
+    cssMode: true,
+    loop: true,
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
