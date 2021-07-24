@@ -227,9 +227,14 @@ img{
     color: var(--first-color-alt);
 }
 
-/* Show menu */
+/* Show Menu */
 .show-menu{
     bottom: 0;
+}
+
+/* Active Links */
+.active-link{
+    color: var(--first-color);
 }
 
 
