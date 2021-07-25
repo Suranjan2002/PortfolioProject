@@ -1196,6 +1196,10 @@ img{
         grid-template-columns: .6fr;
         justify-content: center;
     }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets{
+        bottom: -3.5rem;
+    }
 }
 
 @media screen and (min-width: 768px){
