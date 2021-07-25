@@ -94,7 +94,7 @@ body.dark-theme{
 .change-theme{
     font-size: 1.25rem;
     color: var(--title-color);
-    margin-bottom: var(--mb-1);
+    margin-right: var(--mb-1);
     cursor: pointer;
 }
 
@@ -1176,12 +1176,15 @@ img{
     }
 
     .about__container,
-    .skills__container,
     .portfolio__content,
     .project__container,
     .contact__container,
     .footer__container{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills__container{
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .qualification__sections{
@@ -1285,6 +1288,10 @@ img{
         justify-content: initial;
     }
 
+    .skills__container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .qualification__tabs{
         justify-content: center;
     }
@@ -1320,6 +1327,10 @@ img{
 
     .portfolio__content{
         align-items: center;
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets{
+        bottom: -3.5rem;
     }
 
     .project{
