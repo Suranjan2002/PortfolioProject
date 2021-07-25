@@ -380,6 +380,10 @@ img{
     transition: .3s;
 }
 
+.button__icon:hover{
+    transform: translateX(.25rem);
+}
+
 .button--white{
     background-color: #fff;
     color: var(--first-color);
