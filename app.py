@@ -31,7 +31,7 @@ def index():
         db.session.add(info)
         db.session.commit()
         
-        return redirect('/')
+        return render_template('thankyou.html')
 
     info1 = contact.query.all()
     return render_template('index.html', info=info1)
