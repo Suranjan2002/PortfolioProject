@@ -124,22 +124,6 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
     }
 });
 
-/*CONTACT FORM*/
-// function display() {
-//     document.getElementById("display").innerHTML = "Thank you for contacting me!! Have a nice day!"
-//     document.getElementById("display").style.color = "red"
-// }
-// document.querySelector('.send')
-//     .addEventListener('click', (e) => {
-//         e.preventDefault();
-//         if (document.querySelector('.name').value != '' && document.querySelector('.email').value != '' && document.querySelector('.message').value != '') {
-//             this.display()
-//         }
-//         else {
-//             alert('Fill All The Fields')
-//         }
-//     })
-
 /*SCROLL SECTIONS ACTIVE LINK*/
 const sections = document.querySelectorAll('section[id]')
 
