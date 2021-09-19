@@ -317,11 +317,11 @@ img{
 }
 
 .home__title{
-    font-size: var(--big-font-size);
+    font-size: var(--h1-font-size);
 }
 
 .home__subtile{
-    font-size: var(--h3-font-size);
+    font-size: var(--h2-font-size);
     color: var(--text-color);
     font-weight: var(--font-medium);
     margin-bottom: var(--mb-0-75);
@@ -450,7 +450,7 @@ img{
 }
 
 .about__buttons{
-    display: flex;
+    display: block;
     justify-content: center;
 }
 

@@ -19,12 +19,12 @@ This is full stack web application development project to create a responsive an
 ## Features
 
 - Light/dark mode toggle
+- Typing Text Effect
 - Accordion display section
 - Modal display section
 - Caraousel display section
 - Dynamic contact form
-- Responsive icons and screen
-- Cross platform
+- Responsive website
 
   
 ## Preview
